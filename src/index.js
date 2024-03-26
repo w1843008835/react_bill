@@ -6,14 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import sum from '@/test';
 import { RouterProvider } from 'react-router-dom';
 import router from './router';
+import store from './store';
+import { Provider } from 'react-redux';
 
 console.log(sum(1, 3))
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
+    <RouterProvider router={router}>
 
-  <RouterProvider router={router}>
+    </RouterProvider>
+  </Provider>
 
-  </RouterProvider>
 )
 
 
